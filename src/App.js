@@ -42,11 +42,6 @@ function App() {
       // setInterval(() => { // to set the notification on title to attract people BUT NOT GOOD 
       //   document.title = 'MyApp is Amazing'
       // }, 2000);
-<<<<<<< HEAD
-      
-=======
-
->>>>>>> d648245071130cc0f925a75cfd629b724b093611
       // setInterval(() => { // to set the notification on title to attract people BUT NOT GOOD 
       //   document.title = 'Install MyApp Now!!!'
       // }, 1500);
@@ -62,7 +57,6 @@ function App() {
 
   return (
     <>
-<<<<<<< HEAD
     <Router> 
         <Navbar
             title="MyApp" 
@@ -81,8 +75,7 @@ function App() {
                     toggleMode={toggleMode}/>}/> 
              <Route exact path="/About"  
                     element={<About mode={mode} toggleMode={toggleMode}/>}  /> 
-             {/* <Route 
-=======
+             {/* <Route
       <Router>
         <Navbar
           title="TextUtils"
@@ -102,7 +95,6 @@ function App() {
             <Route exact path="/About"
               element={<About mode={mode} toggleMode={toggleMode} />} />
             {/* <Route 
->>>>>>> d648245071130cc0f925a75cfd629b724b093611
                 exact path="/" 
                 index 
                 element={ 
@@ -114,7 +106,6 @@ function App() {
                  />
                }
              /> */}
-<<<<<<< HEAD
            </Routes>
          </div>
        </Router>
@@ -125,9 +116,7 @@ function App() {
        {/* <Navbar title = "MyApp" mode={mode} toggleMode={toggleMode} />  */}
        {/* <Alert alert={alert} /> */}
        {/* <About/> */}
-      {/* <div className="container my-3"> */}
-        
-=======
+      {/* <div className="container my-3">
           </Routes>
         </div>
       </Router>
@@ -138,16 +127,12 @@ function App() {
       {/* <Navbar title = "MyApp" mode={mode} toggleMode={toggleMode} />  */}
       {/* <Alert alert={alert} /> */}
       {/* <About/> */}
-      {/* <div className="container my-3"> */}
-
->>>>>>> d648245071130cc0f925a75cfd629b724b093611
+      {/* <div className="container m/}
       {/* <TextForm showAlert={showAlert} heading="Word Counter, Character Counter, Remove extra spaces" mode={mode}/> */}
       {/* <About aboutText = "About MyApp" mode={mode}/> */}
       {/* </div> */}
+</>
+  )
+    }
 
-
-    </>
-  );
-}
-
-export default App;
+    export default App;
