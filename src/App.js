@@ -38,68 +38,70 @@ function App() {
       setMode('dark');
       document.body.style.backgroundColor = '#042743';
       showAlert("Dark mode has been enabled", "success");
-      document.title = 'MyApp | Dark Mode';
-      setInterval(() => {
-        document.title = 'MyApp is Amazing'
-      }, 2000);
+      // document.title = 'MyApp | Dark Mode'; // To change the title on web
+      // setInterval(() => { // to set the notification on title to attract people BUT NOT GOOD 
+      //   document.title = 'MyApp is Amazing'
+      // }, 2000);
       
-      setInterval(() => {
-        document.title = 'Install MyApp Now!!!'
-      }, 1500);
+      // setInterval(() => { // to set the notification on title to attract people BUT NOT GOOD 
+      //   document.title = 'Install MyApp Now!!!'
+      // }, 1500);
     }
     
     else{
       setMode('light');
       document.body.style.backgroundColor = 'white';
       showAlert("Dark mode has been disbaled", "success");
-      document.title = 'MyApp | Light Mode';
+      // document.title = 'MyApp | Light Mode'; // To change the title on web
     }
   }
 
   return (
     <>
-    <Router>
+    <Router> 
         <Navbar
-          title="MyApp"
-          aboutText="About MyApp"
-          // homeText="Home"
-          mode={mode}
-          toggleMode={toggleMode}
-        />
-        <Alert alert={alert} />
+            title="MyApp" 
+            aboutText="About MyApp" 
+            homeText="Home" 
+            mode={mode} 
+            toggleMode={toggleMode} 
+          /> 
+         <Alert alert={alert} /> 
 
-        <div className="container">
-          <Routes>
-            <Route path="/" element={<TextForm showAlert={showAlert}
-                  heading="Enter the text you want to Analyze"
-                  mode={mode}
-                  toggleMode={toggleMode}/>}/>
-            <Route path="/About" element={<About />} />
-            <Route
-              path="/TextForm"
-              index
-              element={
-                <TextForm
-                  showAlert={showAlert}
-                  heading="Enter the text you want to Analyze"
-                  mode={mode}
-                  toggleMode={toggleMode}
-                />
-              }
-            />
-          </Routes>
-        </div>
-      </Router>
+         <div className="container"> 
+          <Routes> 
+             <Route exact path="/" element={<TextForm showAlert={showAlert} 
+                   heading="Try MyApp - Word Counter, Character Counter, Remove extra spaces" 
+                    mode={mode} 
+                    toggleMode={toggleMode}/>}/> 
+             <Route exact path="/About"  
+                    element={<About mode={mode} toggleMode={toggleMode}/>}  /> 
+             {/* <Route 
+                exact path="/" 
+                index 
+                element={ 
+                  <TextForm 
+                   showAlert={showAlert}
+                   heading="Try MyApp - Word Counter, Character Counter, Remove extra spaces"
+                   mode={mode}
+                   toggleMode={toggleMode}
+                 />
+               }
+             /> */}
+           </Routes>
+         </div>
+       </Router>
 
 
       {/* <Navbar title = "MyApp" aboutText = "About MyApp" /> */}
-      {/* <Navbar/> */}
-      {/* <Navbar title = "MyApp" mode={mode} toggleMode={toggleMode}/> */}
-      {/* <Alert alert={alert} /> */}
+       {/* <Navbar/> */}
+       {/* <Navbar title = "MyApp" mode={mode} toggleMode={toggleMode} />  */}
+       {/* <Alert alert={alert} /> */}
+       {/* <About/> */}
       {/* <div className="container my-3"> */}
         
-      {/* <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode}/> */}
-      {/* <About/> */}
+      {/* <TextForm showAlert={showAlert} heading="Word Counter, Character Counter, Remove extra spaces" mode={mode}/> */}
+      {/* <About aboutText = "About MyApp" mode={mode}/> */}
       {/* </div> */}
 
       
